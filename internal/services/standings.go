@@ -230,7 +230,7 @@ func (s *StandingsService) generateStandingsHeader() *strings.Builder {
 //	iii. Beat the "Ftre expert ghost" > +3 points
 //	iv. Beat or tie the BKT (set before the track start date) > Score is doubled
 func (s *StandingsService) generateStandingsBody(sb *strings.Builder) (string, []PlayerStanding) {
-	sb.WriteString("CurrentStandings:\n")
+	sb.WriteString("Current standings:\n")
 	if len(s.Times) == 0 {
 		sb.WriteString("No submissions")
 		return sb.String(), []PlayerStanding{}
